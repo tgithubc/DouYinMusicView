@@ -7,6 +7,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.os.Message;
@@ -124,6 +125,14 @@ public class MusicalNoteLayout extends RelativeLayout implements WeakWrapperHand
             mAnimateHandler.sendEmptyMessage(MSG_WHAT_ROTATION);
             mAnimateHandler.sendEmptyMessage(MSG_WHAT_ADD_NOTE);
         }
+    }
+
+    public void setImageResource(int resId) {
+        mMusicView.setImageResource(resId);
+    }
+
+    public void setImageBitmap(Bitmap bm) {
+        mMusicView.setImageBitmap(bm);
     }
 
     @Override
